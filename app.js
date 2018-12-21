@@ -1,33 +1,47 @@
 $(document).ready(function(){
   var valuesArr = [];
+  var counter = 0;
   
-  var liMaker = function(input){
+  var liMaker = function(title, des, date){
+   
+    var newTitle = 'title'+ counter;
+    var newDes = 'des'+ counter;
+    var newDate = 'date'+ counter;
+
     let $li = document.createElement('li');
-    $('ul').append('<li><label><input type="checkbox">'+ input +'</label></li>');
+    $('ul').append('<div id="wrapper" class="'+ newTitle +'"><div class="'+ newTitle +'" id="todo-task"<li><span class="'+ newTitle +'">'+ title +'</span></li><div class="'+ newDes +'" id="description">'+ des +'</div><div class="'+ newDate +'" id="date">'+ date +'</div></div></div>');
+
+    localStorage.setItem(''+ newTitle, JSON.stringify(valuesArr));
+    var data = JSON.parse(localStorage.getItem(''+ newTitle));
   };
   
-  localStorage.setItem('inputFieldValue', JSON.stringify(valuesArr));
-  var myItemInStorage = JSON.parse(localStorage.getItem('inputFieldValue'));
 
   // write to local storage from input when button save clicked
-  $('.btn-submit').on('click', function(){
-    valuesArr.push($('input').val());
-    localStorage.setItem('inputFieldValue', JSON.stringify(valuesArr));
-    liMaker($('input').val());
-    $('input').val('');
+  $('.btn-submit').on('click', () => {
+    
+    counter++;
+
+    valuesArr.push($('.title').val(), $('.description').val(), $('.date').val());
+    
+    liMaker($('.title').val(), $('.description').val(), $('.date').val());
+    
+    $('form').find("input").val("")
+
+
   });
 
+  
   //delete from local storage when delete button clicked
-  $('.btn-delete').on('click', function(){
-    var removedVal = valuesArr.shift();
-    localStorage.setItem('inputFieldValue', JSON.stringify(valuesArr));
-    valuesArr = JSON.parse(localStorage.getItem('inputFieldValue'));
-    $('ul').html('');
-    valuesArr.forEach(item => {
-       $('ul').append('<li><label><input type="checkbox">'+ item +'</label></li>');
-    });
-   
-  });
+  $('.btn-delete').on('click', () => {
+
+    localStorage.removeItem('title'+ counter)
+    $('div').remove('.title'+ counter)
+
+
+    counter--;
+   });
+
+
   //clear all local storage and refresh web page
   $('.clear-all').on('click', () => {
     localStorage.clear();
