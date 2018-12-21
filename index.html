@@ -10,15 +10,23 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <form>
-  <div>
-    <input class="text-entry" type="text" placeholder="enter your information">
-    <button class="btn-submit" type="button">save value</button>
-    <button class="btn-delete" type="button">delete value</button>
-    <button class="clear-all" type="button">clear all</button>
+  <div class="todo-add">
+    <h3>Add Task</h3>
+    <form class="add-task">
+      <input class="title" type="text" placeholder="Title">
+      <input class ="description" placeholder="Description"></input>
+      <input class ="date" type="date">
+      <button class="btn-submit" type="button">Add task</button>
+      <button class="btn-delete" type="button">Delete task</button>
+      <button class="clear-all" type="button">Clear all tasks</button>
+    </form>
   </div>
-  <ul class="list-display-field">
-  </ul>
-</form>
+  <div class="in-progress">
+    <h3>In Progress</h3>
+    <form class="todo-list">
+       <ul class="list-display-field">
+        </ul>
+    </form>
+  </div>
   </body>
 </html>
