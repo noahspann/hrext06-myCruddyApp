@@ -20,8 +20,15 @@ Create Read Update Delete using localStorage with JS, HTML and CSS
 - [x] Display stored value in proper div
 
 ### Next Sprint (what are we trying to code)
-- [ ] Add description and due date boxes
-- [ ] Add pending, in progress and completed tabs
-- [ ] Make it look pretty
-- [ ] 
+- [x] Add description and due date boxes
+	-[x] Make it add beneath title
 
+- [x] Add in progress tab
+	- [x] Make the data transfer into box
+
+- [ ] Make a trashcan div
+	- [ ] Make each task draggable to the trashcan div
+
+- [ ] Make first letter of each word automtically uppercase
+
+- [ ] Make input fields automatically clear after submit button clicked 
