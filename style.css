@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Quicksand');
+
+
+
+body {
+	background-color: rgb(130, 170, 171);
+}
+h3 {
+	font-family: Lato;
+	font-weight: bold;
+	text-align: center;
+}
+
+input {
+	padding: 5px;
+	margin-top: 30px;
+	margin-right: 5px;
+	margin-left: 50px;
+	border: 1px grey;
+	border-radius: 5px;
+}
+
+button {
+	font-family: Lato;
+	margin-top: 25px;
+	padding: 3px;
+	margin-left: 10px;
+
+}
+
+li {
+	display: list-item;
+	list-style-type: circle;
+}
+
+
+
+.todo-add {
+	background-color: #e3e3e3;
+	width: 250px;
+	float: left;
+	margin: 0 5px;
+	min-height: 240px;
+	border-radius: 10px;
+	padding-bottom: 15px;
+}
+
+
+
+.in-progress {
+	background-color: #e3e3e3;
+	width: 250px;
+	float: left;
+	margin: 0 5px;
+	min-height: 240px;
+	border-radius: 10px;
+	padding-bottom: 15px;
+}
+
+#wrapper {
+	border: 1px solid rgb(130, 170, 171);
+	border-radius: 3px;
+	margin-right: 50px;
+	margin-bottom: 10px;
+
+}
+
+#todo-task {
+	font-family: 'Lato';
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	font-size: small;
+	padding: 3px;
+
+}
+
+#description {
+	font-family: 'Quicksand';
+	font-weight: lighter;
+}
+
+#date {
+	font-style: italic;
+}
